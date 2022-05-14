@@ -7,17 +7,17 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             bool isConverted = false;
+            int number = 0;
+            Console.WriteLine("Введите число");
 
             while (isConverted == false)
             {
-                GetNumber(out isConverted);
+                GetNumber(out number, out isConverted);
             }
         }
 
-        static void GetNumber(out bool isConverted)
+        static void GetNumber(out int number, out bool isConverted)
         {
-            int number = 0;
-            Console.WriteLine("Введите число");
             string input = Console.ReadLine();
             isConverted = int.TryParse(input, out number);
 
