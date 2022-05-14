@@ -10,11 +10,11 @@ namespace ConsoleApp1
 
             while (isConverted == false)
             {
-                ConvertNumber(out isConverted);
+                GetNumber(out isConverted);
             }
         }
 
-        static void ConvertNumber(out bool isConverted)
+        static void GetNumber(out bool isConverted)
         {
             int number = 0;
             Console.WriteLine("Введите число");
