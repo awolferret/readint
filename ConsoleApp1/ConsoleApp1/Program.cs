@@ -12,11 +12,11 @@ namespace ConsoleApp1
 
             while (isConverted == false)
             {
-                GetNumber(out number, out isConverted);
+                GetNumber(number, out isConverted);
             }
         }
 
-        static void GetNumber(out int number, out bool isConverted)
+        static void GetNumber(int number, out bool isConverted)
         {
             string input = Console.ReadLine();
             isConverted = int.TryParse(input, out number);
