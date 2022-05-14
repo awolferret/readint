@@ -6,29 +6,30 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            GetNumber();
+        }
+
+        static void GetNumber()
+        {
             bool isConverted = false;
             int number = 0;
             Console.WriteLine("Введите число");
 
             while (isConverted == false)
             {
-                GetNumber(number, out isConverted);
-            }
-        }
+                string input = Console.ReadLine();
+                isConverted = int.TryParse(input, out number);
 
-        static void GetNumber(int number, out bool isConverted)
-        {
-            string input = Console.ReadLine();
-            isConverted = int.TryParse(input, out number);
+                if (isConverted == true)
+                {
+                    Console.WriteLine($"Ваше число: {number}");
+                }
+                else
+                {
+                    Console.WriteLine("Не удалось сконвертировать");
+                }
+            }
 
-            if (isConverted == true)
-            {
-                Console.WriteLine($"Ваше число: {number}");
-            }
-            else 
-            {
-                Console.WriteLine("Не удалось сконвертировать");
-            }
         }
     }
 }
