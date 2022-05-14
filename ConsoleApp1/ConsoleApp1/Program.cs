@@ -14,7 +14,7 @@ namespace ConsoleApp1
             }
         }
 
-        static int ConvertNumber(out bool isConverted)
+        static void ConvertNumber(out bool isConverted)
         {
             int number = 0;
             Console.WriteLine("Введите число");
@@ -29,7 +29,6 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Не удалось сконвертировать");
             }
-            return number;
         }
     }
 }
