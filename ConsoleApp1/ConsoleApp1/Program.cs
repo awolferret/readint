@@ -7,20 +7,22 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             string number = " ";
-            GetNumber(out number);
+            GetNumber(ref number);
             Console.WriteLine($"ваше число: {number}");
         }
 
-        static int GetNumber(out string number)
+        static void GetNumber(ref string number)
         {
-            while (true)
+            bool isConverted = false;
+            while (isConverted == false)
             {
                 Console.WriteLine("Введите число");
                 number = Console.ReadLine();
                 int convertedNumber;
                 if (int.TryParse(number, out convertedNumber))
                 {
-                    return convertedNumber;
+                    Console.WriteLine("Получилось");
+                    isConverted = true;
                 }
                 else
                 {
